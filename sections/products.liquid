@@ -1,0 +1,101 @@
+<section>
+    <div class="product-block">
+        <img class="product-img" src="https://picsum.photos/1024/766?grayscale">
+        <div class="product-overlay-text-left">
+            <h2><a href="#">Product Left</a></h2>
+        </div>
+    </div>
+    <div class="product-block">
+        <img class="product-img" src="https://picsum.photos/1024/765?grayscale">
+        <div class="product-overlay-text-right">
+            <h2><a href="#">Product Right</a></h2>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="product-block">
+        <img class="product-img" src="https://picsum.photos/1024/764?grayscale">
+        <div class="product-overlay-text-left-bottom">
+            <h2><a href="#">Product Left</a></h2>
+        </div>
+    </div>
+    <div class="product-block">
+        <img class="product-img" src="https://picsum.photos/1024/763?grayscale">
+        <div class="product-overlay-text-right-bottom">
+            <h2><a href="#">Product Right</a></h2>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "Products Homepage",
+"settings": [
+{
+"type":"text",
+"id": "product_top_left",
+"default": "Enter Product Text",
+"label": "Product Text Top Left"
+},
+{
+"type": "image_picker",
+"id": "product_img_top_left",
+"label": "Product Image Top Left"
+},
+{
+"type": "url",
+"id": "product_img_url_top_left",
+"label": "Product Image Link Top Left"
+},
+{
+"type":"text",
+"id": "product_top_right",
+"default": "Enter Product Text",
+"label": "Product Text Top Right"
+},
+{
+"type": "image_picker",
+"id": "product_img_top_right",
+"label": "Product Image Top Right"
+},
+{
+"type": "url",
+"id": "product_img_url_top_right",
+"label": "Product Image Link Top Right"
+},
+{
+"type":"text",
+"id": "product_bottom_left",
+"default": "Enter Product Text",
+"label": "Product Text Bottom Left"
+},
+{
+"type": "image_picker",
+"id": "product_img_bottom_left",
+"label": "Product Image Bottom Left"
+},
+{
+"type": "url",
+"id": "product_img_url_bottom_left",
+"label": "Product Image Link Bottom Left"
+},
+{
+"type":"text",
+"id": "product_bottom_right",
+"default": "Enter Product Text",
+"label": "Product Text Top Right"
+},
+{
+"type": "image_picker",
+"id": "product_img_bottom_right",
+"label": "Product Image Bottom Right"
+},
+{
+"type": "url",
+"id": "product_img_url_bottom_right",
+"label": "Product Image Link Bottom Right"
+}
+]
+}
+{% endschema %}
