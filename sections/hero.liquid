@@ -1,0 +1,24 @@
+<div class="main">
+    <img class="main-img" src="{{section.settings.hero_img | img_url: '800x'}}">
+    <div class="overlay-text">
+        <h2>{{section.settings.overlay_text}}</h2>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Hero Image",
+"settings": [
+{
+"type": "image_picker",
+"id": "hero_img",
+"label": "Hero Image"
+},
+{
+"type": "text",
+"id": "overlay_text",
+"label": "Overlay Text"
+}
+]
+}
+{% endschema %}
