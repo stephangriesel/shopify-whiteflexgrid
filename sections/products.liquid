@@ -1,29 +1,35 @@
 <section>
     <div class="product-block">
-        <img class="product-img" src="https://picsum.photos/1024/766?grayscale">
+        <img class="product-img" src="{{section.settings.product_img_top_left | img_url: '1920x'}}">
         <div class="product-overlay-text-left">
-            <h2><a href="#">Product Left</a></h2>
+            <h2><a href="{{section.settings.product_img_url_top_left}}">{{section.settings.product_text_top_left}}</a>
+            </h2>
         </div>
     </div>
     <div class="product-block">
-        <img class="product-img" src="https://picsum.photos/1024/765?grayscale">
+        <img class="product-img" src="{{section.settings.product_img_top_right | img_url: '1920x'}}">
         <div class="product-overlay-text-right">
-            <h2><a href="#">Product Right</a></h2>
+            <h2><a href="{{section.settings.product_img_url_top_right}}">{{section.settings.product_text_top_right}}</a>
+            </h2>
         </div>
     </div>
 </section>
 
 <section>
     <div class="product-block">
-        <img class="product-img" src="https://picsum.photos/1024/764?grayscale">
+        <img class="product-img" src="{{section.settings.product_img_bottom_left | img_url: '1920x'}}">
         <div class="product-overlay-text-left-bottom">
-            <h2><a href="#">Product Left</a></h2>
+            <h2><a
+                    href="{{section.settings.product_img_url_bottom_left}}">{{section.settings.product_text_bottom_left}}</a>
+            </h2>
         </div>
     </div>
     <div class="product-block">
-        <img class="product-img" src="https://picsum.photos/1024/763?grayscale">
+        <img class="product-img" src="{{section.settings.product_img_bottom_right | img_url: '1920x'}}">
         <div class="product-overlay-text-right-bottom">
-            <h2><a href="#">Product Right</a></h2>
+            <h2><a
+                    href="{{section.settings.product_img_url_bottom_right}}">{{section.settings.product_text_bottom_right}}</a>
+            </h2>
         </div>
     </div>
 </section>
@@ -34,7 +40,7 @@
 "settings": [
 {
 "type":"text",
-"id": "product_top_left",
+"id": "product_text_top_left",
 "default": "Enter Product Text",
 "label": "Product Text Top Left"
 },
@@ -50,7 +56,7 @@
 },
 {
 "type":"text",
-"id": "product_top_right",
+"id": "product_text_top_right",
 "default": "Enter Product Text",
 "label": "Product Text Top Right"
 },
@@ -66,7 +72,7 @@
 },
 {
 "type":"text",
-"id": "product_bottom_left",
+"id": "product_text_bottom_left",
 "default": "Enter Product Text",
 "label": "Product Text Bottom Left"
 },
@@ -82,7 +88,7 @@
 },
 {
 "type":"text",
-"id": "product_bottom_right",
+"id": "product_text_bottom_right",
 "default": "Enter Product Text",
 "label": "Product Text Top Right"
 },
