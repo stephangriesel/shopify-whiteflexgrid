@@ -1,0 +1,13 @@
+<div>
+    <ul>
+        {% for link in linklists[section.settings.main_linklist].links %}
+
+        {% if link.links == blank %}
+        <li>
+            <a href="{{link.url}}">{{link.title}}</a>
+        </li>
+        {% endif %}
+
+        {% endfor %}
+    </ul>
+</div>

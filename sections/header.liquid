@@ -1,0 +1,29 @@
+<header>
+    <nav>
+        <div>
+            <h2>Logo</h2>
+        </div>
+        {% include 'menu' %}
+        <div>
+            <ul>
+                <li>Cart</li>
+                <li>Login</li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+{% schema %}
+{
+"name": "Main Menu",
+"settings": [
+{
+"type": "link_list",
+"id": "main_linklist",
+"label": "Menu",
+"default": "main-menu"
+}
+]
+}
+{% endschema %}
