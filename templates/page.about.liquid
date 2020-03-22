@@ -1,0 +1,10 @@
+{% include 'breadcrumbs', title: 'About' %}
+
+<section>
+    <div class="img-block">
+        <img src="{{settings.about_img | img_url: '450x'}}" alt="About Image">
+    </div>
+    <div>
+        {{page.content}}
+    </div>
+</section>

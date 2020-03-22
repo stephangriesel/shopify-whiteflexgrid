@@ -32,6 +32,10 @@ nav li {
   margin: 1em;
 }
 
+.breadcrumb {
+  margin-bottom: 0;
+}
+
 .breadcrumbs-wrapper {
   background-color: #e9ecef;
 }
@@ -45,7 +49,7 @@ nav li {
   text-align: center;
 }
 
-.main img {
+.main .main-img {
   width: 100%;
 }
 
@@ -58,7 +62,6 @@ nav li {
 }
 
 section {
-  height: 20em;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
@@ -69,6 +72,16 @@ section {
   grid-gap: 2em;
   -ms-grid-columns: (minmax(250px, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.img-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2em;
 }
 
 footer {
