@@ -122,6 +122,87 @@ nav li {
   color: #000;
 }
 
+.trend-product {
+  position: relative;
+  text-align: center;
+}
+
+.trend-product .trend-product-img {
+  width: 100%;
+}
+
+.trend-product .trend-product-overlay-text-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-one a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-two a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-three {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-three a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-four {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-four a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-five {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-five a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-six {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-six a {
+  color: #000;
+}
+
 section {
   display: -ms-grid;
   display: grid;
@@ -133,6 +214,19 @@ section {
   grid-gap: 2em;
   -ms-grid-columns: (minmax(250px, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.product-six {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 2em;
+  -ms-grid-columns: (minmax(100px, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .img-block {

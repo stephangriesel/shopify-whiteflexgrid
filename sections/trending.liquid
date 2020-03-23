@@ -1,0 +1,50 @@
+{% assign collection = collections [section.settings.collection] %}
+<section class="product-six">
+    {% for product in collection.products limit: section.settings.product_limit %}
+    <div class="trend-product">
+        <a href="#">
+            <img class="trend-product-img" src="{{product.featured_image.src | img_url: '1920x'}}">
+            <div class="trend-product-overlay-text-one">
+                <h2>Product One</h2>
+                <p><a href="{{product.url}}">More</a></p>
+                {% if product.compare_at_price and product.compare_at_price != product.price %}
+                <p>SALE</p>
+                {% endif %}
+            </div>
+            <div>
+                <h4><a href="{{product.url}}">{{product.title}}</a></h4>
+                <p>{{product.price | money}}</p>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</section>
+
+{% schema %}
+{
+"name": "Trending Products",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Header",
+"default": "Trending Products"
+},
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "range",
+"id": "product_limit",
+"label": "Product Limit",
+"min": 3,
+"max": 9,
+"default": 3
+
+}
+]
+
+}
+{% endschema %}
