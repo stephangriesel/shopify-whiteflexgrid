@@ -44,6 +44,13 @@ nav li {
   margin: 0.5em;
 }
 
+.main-wrapper {
+  min-height: 100vh;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
 .main,
 .product-block {
   position: relative;
@@ -240,11 +247,24 @@ section {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #3b3b3b;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */
