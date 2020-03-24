@@ -1,0 +1,66 @@
+<footer>
+    <div class="social-icons">
+        <ul>
+            {% if section.settings.facebook != blank %}
+            <li>
+                <a href="{{section.settings.facebook}}">
+                    <i class="fa fa-facebook-official fa-2x" aria-hidden="true">
+                    </i>
+                </a>
+            </li>
+            {% endif %}
+            {% if section.settings.twitter != blank %}
+            <li>
+                <a href="{{section.settings.twitter}}">
+                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true">
+                    </i>
+                </a>
+            </li>
+            {% endif %}
+            {% if section.settings.instagram != blank %}
+            <li>
+                <a href="{{section.settings.instagram}}"><i class="fa fa-instagram fa-2x" aria-hidden="true">
+                    </i>
+                </a>
+            </li>
+            {% endif %}
+            {% if section.settings.pinterest != blank %}
+            <li>
+                <a href="{{section.settings.pinterest}}">
+                    <i class="fa fa-pinterest-square fa-2x" aria-hidden="true">
+                    </i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <p>Copyright 2020</p>
+</footer>
+
+{% schema %}
+{
+"name": "Footer",
+"settings": [
+{
+"type":"text",
+"id":"facebook",
+"label":"Facebook Link"
+},
+{
+"type":"text",
+"id":"twitter",
+"label":"Twitter Link"
+},
+{
+"type":"text",
+"id":"instagram",
+"label":"Instagram Link"
+},
+{
+"type":"text",
+"id":"pinterest",
+"label":"Pinterest Link"
+}
+]
+}
+{% endschema %}
