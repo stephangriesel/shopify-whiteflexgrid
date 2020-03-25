@@ -1,0 +1,19 @@
+{% if section.settings.faq != blank %}
+<button class="accordion">Section 1</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+{% endif %}
+
+{% schema %}
+{
+"name": "FAQ",
+"settings": [
+{
+"type":"text",
+"id":"faq",
+"label":"FAQ"
+}
+]
+}
+{% endschema %}
