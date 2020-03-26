@@ -16,8 +16,16 @@
         </div>
 
     </div>
-    <div class="span-2">
-        <h1>Right Block</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, assumenda.</p>
+    <div class="span-2 products-collection">
+        {% for product in collection.products %}
+        <div class="product">
+            <img src="{{product.featured_image.src | img_url: '150x'}}}" alt="product">
+            <h4>Product Title</h4>
+            <p>{{product.price | money}}</p>
+            {% if product.compare_at_price and product.compare_at_price != product.price %}
+            <h4>SALE</h4>
+            {% endif %}
+        </div>
+        {% endfor %}
     </div>
 </section>
