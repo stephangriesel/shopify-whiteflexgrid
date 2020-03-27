@@ -1,19 +1,17 @@
 <section class="section-collection">
     <div class="collection-filters">
-        <button class="accordion">Section 1</button>
+        {% for link in linklists[section.settings.category].links %}
+        {% if link.links != blank %}
+        <button class="accordion">{{link.title}}</button>
         <div class="panel">
-            <p>Lorem ipsum...</p>
+            <ul>
+                {% for childlink in link.links %}
+                <li><a href="{{link.url}}">{{childlink.title}}</a></li>
+                {% endfor %}
+            </ul>
         </div>
-
-        <button class="accordion">Section 2</button>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
-
-        <button class="accordion">Section 3</button>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
+        {% endif %}
+        {% endfor %}
 
     </div>
     <div class="span-2 products-collection">
