@@ -1,3 +1,7 @@
+{% assign short_description = product.description | split: "Product Description" | first %}
+{% assign product_description = product.description | split: "Product Description" | last | split: "Specifications" | first %}
+{% assign specifications = product.description | split: "Specifications" | last %}
+
 <script type="text/javascript">
     window.product = {{ product | json }} || {};
 </script>
@@ -26,7 +30,7 @@
     </div>
     <div>
         <h1>{{product.title}}</h1>
-        <p>{{product.description}}
+        <p>{{short_description}}
         </p>
         <form method="post" action="/cart/add">
             <!-- Shopify Documentation: https://shopify.dev/docs/liquid/reference/objects/product -->
@@ -62,13 +66,17 @@
             <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
             <button type="submit" value="Add to Cart">Add To Cart</button>
         </form>
-        <div class="size-guide">
-            <button class="accordion">Size Guide</button>
+
+        <div class="product-information">
+            <button class="accordion">Product Information & Size Guide</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quae, eaque mollitia nostrum
-                    beatae
-                    esse odio corrupti accusamus nihil similique.</p>
+                {{product_description}}
+            </div>
+        </div>
+        <div class="size-guide">
+            <h3>Size Guide</h3>
+            <div class="panel">
+                {{specifications}}
             </div>
         </div>
     </div>
