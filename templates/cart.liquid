@@ -13,45 +13,26 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for line_item in cart.items %}
                     <tr>
                         <td>
                             <div class="product-info">
-                                <img width="80" src="images/cart/cart-1.jpg" alt="">
-                                <a href="">Sunglass</a>
+                                <img width="80" src="{{line_item.image | product_img_url: '1920x'}}" alt="">
+                                <a href="{{line_item.url}}">{{line_item.title}}</a>
                             </div>
                         </td>
-                        <td>2</td>
-                        <td>$200.00</td>
                         <td>
-                            <a class="product-remove" href="">Remove</a>
+                            <input type="number" class="" name="updates[]" value={{line_item.quantity}} min="0"
+                                pattern="[0-9]*">
+                        </td>
+                        <td>{{line_item.line_price | money}}</td>
+                        <td>
+                            <!-- Shopify Cart Documentation: https://shopify.dev/docs/liquid/reference/objects/cart -->
+                            <a class="product-remove" href="/cart/change?line={{forloop.index}}&quantity=0"
+                                rel={{line_item.id}}>Remove</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <div class="product-info">
-                                <img width="80" src="images/cart/cart-2.jpg" alt="">
-                                <a href="">Airspace</a>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                        <td>
-                            <a class="product-remove" href="">Remove</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="product-info">
-                                <img width="80" src="images/cart/cart-3.jpg" alt="">
-                                <a href="">Bingo</a>
-                            </div>
-                        </td>
-                        <td>4</td>
-                        <td>$200.00</td>
-                        <td>
-                            <a class="product-remove" href="">Remove</a>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
             <div class="row justify-content-end cart-total">
@@ -59,11 +40,11 @@
                     Total
                 </div>
                 <div class="col-md-2">
-                    $500.00
+                    {{cart.total_price | money}}
                 </div>
             </div>
-            <a href="checkout.html" class="btn btn-main pull-right">Checkout</a>
-            <a href="checkout.html" id="update-btn" class="btn btn-transparent pull-right">Update</a>
+            <input type="submit" name="checkout" class="" value="Checkout">
+            <input type="submit" name="update" class="" value="Update">
         </form>
     </div>
 </section>
