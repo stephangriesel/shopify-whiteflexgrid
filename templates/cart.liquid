@@ -1,0 +1,69 @@
+{% include 'breadcrumbs', title: 'Cart' %}
+
+<section class="cart-section">
+    <div class="product-list">
+        <form method="post">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Item Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img width="80" src="images/cart/cart-1.jpg" alt="">
+                                <a href="">Sunglass</a>
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>$200.00</td>
+                        <td>
+                            <a class="product-remove" href="">Remove</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img width="80" src="images/cart/cart-2.jpg" alt="">
+                                <a href="">Airspace</a>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>$200.00</td>
+                        <td>
+                            <a class="product-remove" href="">Remove</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img width="80" src="images/cart/cart-3.jpg" alt="">
+                                <a href="">Bingo</a>
+                            </div>
+                        </td>
+                        <td>4</td>
+                        <td>$200.00</td>
+                        <td>
+                            <a class="product-remove" href="">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row justify-content-end cart-total">
+                <div class="col-md-2">
+                    Total
+                </div>
+                <div class="col-md-2">
+                    $500.00
+                </div>
+            </div>
+            <a href="checkout.html" class="btn btn-main pull-right">Checkout</a>
+            <a href="checkout.html" id="update-btn" class="btn btn-transparent pull-right">Update</a>
+        </form>
+    </div>
+</section>

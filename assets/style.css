@@ -351,6 +351,21 @@ section {
   /* Unicode character for "minus" sign (-) */
 }
 
+/* Cart Page */
+.cart-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2em 0.5em;
+}
+
 /* Footer */
 footer {
   position: -webkit-sticky;
