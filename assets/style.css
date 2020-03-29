@@ -244,6 +244,23 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.img-block .img-thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120px;
+  height: 150px;
+  padding: 0.5em;
+}
+
+.img-block .img-thumbs img {
+  padding: 0.5em;
 }
 
 /* Collection Section */
@@ -298,6 +315,10 @@ section {
   outline: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.size-guide {
+  width: 50%;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
