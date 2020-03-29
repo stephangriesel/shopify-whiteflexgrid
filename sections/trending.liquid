@@ -6,7 +6,15 @@
             <img class="trend-product-img" src="{{product.featured_image.src | img_url: '1920x'}}">
             <div class="trend-product-overlay-text-one">
                 <h2>Product One</h2>
-                <p><a href="{{product.url}}">More</a></p>
+                <div>
+                    <p><a href="{{product.url}}">More</a></p>
+                    <p>
+                        <form id="form-{{product.handle}}" method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{product.variants.first.id}}">
+                            <a onclick="document.getElementById('form-{{product.handle}}').submit()">Add To Cart</a>
+                        </form>
+                    </p>
+                </div>
                 {% if product.compare_at_price and product.compare_at_price != product.price %}
                 <p>SALE</p>
                 {% endif %}

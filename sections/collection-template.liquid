@@ -19,6 +19,12 @@
         <div class="product">
             <img src="{{product.featured_image.src | img_url: '150x'}}}" alt="product">
             <h4>{{product.title}}</h4>
+            <p>
+                <form id="form-{{product.handle}}" method="post" action="/cart/add">
+                    <input type="hidden" name="id" value="{{product.variants.first.id}}">
+                    <a onclick="document.getElementById('form-{{product.handle}}').submit()">Add To Cart</a>
+                </form>
+            </p>
             <p>{{product.price | money}}</p>
             {% if product.compare_at_price and product.compare_at_price != product.price %}
             <h4>SALE</h4>
