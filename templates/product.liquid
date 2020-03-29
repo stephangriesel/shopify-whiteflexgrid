@@ -13,27 +13,49 @@
 
 <section>
     <div class="img-block">
-        <img src="https://picsum.photos/350/500?grayscale" alt="">
+        {% for image in product.images %}
+        <img src="{{image.src | img_url: '300x'}}" alt="">
         <div class="img-thumbs">
-            <img src="https://picsum.photos/100/120?grayscale" alt="">
-            <img src="https://picsum.photos/100/121?grayscale" alt="">
-            <img src="https://picsum.photos/100/119?grayscale" alt="">
+            <img src="{{image.src | img_url: '90'}}" alt="">
         </div>
+        {% endfor %}
     </div>
     <div>
-        <h1>My Product Title</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum officia vitae impedit minima
-            necessitatibus illo incidunt maxime pariatur esse totam blanditiis id dicta alias, facilis veritatis
-            magnam quae consequuntur deleniti unde neque placeat sapiente culpa. Vel in officiis earum voluptatibus!
+        <h1>{{product.title}}</h1>
+        <p>{{product.description}}
         </p>
-        <ul>
-            <li>Nice Fit</li>
-            <li>Colourful</li>
-            <li>All sizes</li>
-            <li>Interchangeable</li>
-            <li>Lean</li>
-        </ul>
-        <p>Price: $200</p>
+        <div class="product-category">
+            <span>Size:</span>
+            <select class="form-control">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+        </div>
+        <div class="product-category">
+            <span>Color:</span>
+            <select class="form-control">
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Orange</option>
+            </select>
+        </div>
+        <div class="product-quantity">
+            <span>Quantity:</span>
+            <input min="1" type="number" id="quantity" name="quantity" value="1" />
+        </div>
+        <div class="product-category">
+            <span>Categories:</span>
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Soap</a></li>
+            </ul>
+        </div>
+        <p>{{product.price | money}}</p>
+        <a href="cart.html">Add To Cart</a>
+
         <div class="size-guide">
             <button class="accordion">Size Guide</button>
             <div class="panel">
