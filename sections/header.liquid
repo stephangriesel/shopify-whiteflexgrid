@@ -6,9 +6,17 @@
         {% include 'menu' %}
         <div>
             <ul>
-                <li>Cart</li>
-                <li>Login</li>
+                <!-- https://shopify.dev/docs/liquid/reference/objects/shop -->
+                <li><a href="/cart">Cart</a></li>
+                {% if shop.customer_accounts_enabled %}
+                {% if customer %}
+                <li><a href="/account">Your Account</a></li>
+                <li><a href="/account">Log Out</a></li>
+                {% else %}
+                <li><a href="/account/login">Login</a></li>
             </ul>
+            {% endif %}
+            {% endif %}
         </div>
 
     </nav>
