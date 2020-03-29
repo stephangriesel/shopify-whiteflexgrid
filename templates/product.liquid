@@ -24,38 +24,39 @@
         <h1>{{product.title}}</h1>
         <p>{{product.description}}
         </p>
-        <div class="product-category">
-            <span>Size:</span>
-            <select class="form-control">
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-            </select>
-        </div>
-        <div class="product-category">
-            <span>Color:</span>
-            <select class="form-control">
-                <option>Red</option>
-                <option>Blue</option>
-                <option>Green</option>
-                <option>Orange</option>
-            </select>
-        </div>
-        <div class="product-quantity">
-            <span>Quantity:</span>
-            <input min="1" type="number" id="quantity" name="quantity" value="1" />
-        </div>
-        <div class="product-category">
-            <span>Categories:</span>
-            <ul>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Soap</a></li>
-            </ul>
-        </div>
-        <p>{{product.price | money}}</p>
-        <a href="cart.html">Add To Cart</a>
-
+        <form method="post" action="/cart/add">
+            <!-- Shopify Documentation: https://shopify.dev/docs/liquid/reference/objects/product -->
+            {% unless product.has_only_default_variant %}
+            {% for product_option in product.options_with_values%}
+            <div class="product-category">
+                <span>{{product_option.name}}</span>
+                <select class="form-control" data-index="option{{forloop.index}}">
+                    {% for value in product_option.values %}
+                    <!-- set value of selected option as attribute  -->
+                    <option value="{{value | escape }}" {% if product_option.selected_value == value %}
+                        selected="selected" {% endif %}>
+                        {{value}}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endfor %}
+            {% endunless %}
+            <div class="product-quantity">
+                <span>Quantity:</span>
+                <input min="1" type="number" id="quantity" name="quantity" value="1" />
+            </div>
+            <div class="product-category">
+                <span>Categories:</span>
+                <ul>
+                    {% for collection in product.collections%}
+                    <li><a href="{{collection.url}}">{{collection.title}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <p>{{product.price | money}}</p>
+            <a href="cart.html">Add To Cart</a>
+        </form>
         <div class="size-guide">
             <button class="accordion">Size Guide</button>
             <div class="panel">
