@@ -59,7 +59,8 @@
                 </ul>
             </div>
             <p>{{product.price | money}}</p>
-            <a href="cart.html">Add To Cart</a>
+            <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
+            <button type="submit" value="Add to Cart">Add To Cart</button>
         </form>
         <div class="size-guide">
             <button class="accordion">Size Guide</button>
