@@ -114,7 +114,7 @@ nav ul {
     transition: all 0.5s;
   }
   .button:not(.secondary) a:hover {
-    background: #000;
+    /* background: #000; */
   }
   .button.secondary a:hover {
     color: #333333;
@@ -568,13 +568,38 @@ button {
 }
 
 /* About Page */
-.about-page {
+.about-page,
+.contact-page {
   height: 100vh;
 }
 
 .img-block img {
   max-width: 37.5em;
   max-height: 37.5em;
+}
+
+/* Contact Page */
+.contact-blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-blocks input,
+textarea {
+  border: none;
+  padding: 0.5em;
+  margin: 0.2em;
+  background: #d8d8d8;
+  font-size: 1.2em;
+}
+
+.contact-blocks textarea {
+  width: 100%;
+}
+
+.contact-blocks ul {
+  list-style: none;
 }
 
 /* Footer */
