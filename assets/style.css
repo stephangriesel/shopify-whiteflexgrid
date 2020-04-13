@@ -306,6 +306,11 @@ nav ul {
   text-align: center;
 }
 
+.productMoreCart {
+  display: flex;
+  justify-content: center;
+}
+
 .trend-product .trend-product-img {
   width: 100%;
 }
