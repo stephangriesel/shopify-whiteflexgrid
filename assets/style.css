@@ -1,8 +1,10 @@
 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -194,8 +196,8 @@ nav ul {
 .main .product-overlay-text-left,
 .product-block .product-overlay-text-left {
   position: absolute;
-  top: 80%;
-  left: 20%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -208,8 +210,8 @@ nav ul {
 .main .product-overlay-text-right,
 .product-block .product-overlay-text-right {
   position: absolute;
-  top: 80%;
-  left: 80%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -222,8 +224,8 @@ nav ul {
 .main .product-overlay-text-left-bottom,
 .product-block .product-overlay-text-left-bottom {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -236,8 +238,8 @@ nav ul {
 .main .product-overlay-text-right-bottom,
 .product-block .product-overlay-text-right-bottom {
   position: absolute;
-  top: 20%;
-  left: 80%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -245,6 +247,57 @@ nav ul {
 .main .product-overlay-text-right-bottom a,
 .product-block .product-overlay-text-right-bottom a {
   color: #000;
+}
+
+@media all and (min-width: 768px) {
+  .main .product-overlay-text-left,
+  .product-block .product-overlay-text-left {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .main .product-overlay-text-left a,
+  .product-block .product-overlay-text-left a {
+    color: #000;
+  }
+  .main .product-overlay-text-right,
+  .product-block .product-overlay-text-right {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .main .product-overlay-text-right a,
+  .product-block .product-overlay-text-right a {
+    color: #000;
+  }
+  .main .product-overlay-text-left-bottom,
+  .product-block .product-overlay-text-left-bottom {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .main .product-overlay-text-left-bottom a,
+  .product-block .product-overlay-text-left-bottom a {
+    color: #000;
+  }
+  .main .product-overlay-text-right-bottom,
+  .product-block .product-overlay-text-right-bottom {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .main .product-overlay-text-right-bottom a,
+  .product-block .product-overlay-text-right-bottom a {
+    color: #000;
+  }
 }
 
 .trend-product {
