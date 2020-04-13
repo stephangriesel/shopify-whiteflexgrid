@@ -1,4 +1,4 @@
-<section class="section-collection">
+<section class="section-collection collection-page">
     <div class="collection-filters">
         {% for link in linklists[section.settings.category].links %}
         {% if link.links != blank %}
@@ -19,12 +19,16 @@
         <div class="product">
             <img src="{{product.featured_image.src | img_url: '150x'}}}" alt="product">
             <h4>{{product.title}}</h4>
-            <p>
-                <form id="form-{{product.handle}}" method="post" action="/cart/add">
-                    <input type="hidden" name="id" value="{{product.variants.first.id}}">
-                    <a onclick="document.getElementById('form-{{product.handle}}').submit()">Add To Cart</a>
-                </form>
-            </p>
+            <div class="productMoreCart">
+                <p><a href="{{product.url}}"><i class="fa fa-search" aria-hidden="true"></i></a></p>
+                <p>
+                    <form id="form-{{product.handle}}" method="post" action="/cart/add">
+                        <input type="hidden" name="id" value="{{product.variants.first.id}}">
+                        <a onclick="document.getElementById('form-{{product.handle}}').submit()"><i
+                                class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                    </form>
+                </p>
+            </div>
             <p>{{product.price | money}}</p>
             {% if product.compare_at_price and product.compare_at_price != product.price %}
             <h4>SALE</h4>

@@ -6,6 +6,7 @@
 a {
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
 
 body {
@@ -567,7 +568,7 @@ button {
   margin: 2em 0.5em;
 }
 
-/* About Page */
+/* Full Height VH Pages */
 .about-page,
 .contact-page {
   height: 100vh;
@@ -604,6 +605,7 @@ textarea {
 
 /* Footer */
 footer {
+  color: #fff;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
@@ -633,6 +635,7 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1em 0;
 }
 
 .footer-links a {
@@ -643,6 +646,15 @@ footer ul {
 .footer-links li {
   margin: 0.2em;
   padding: 0;
+}
+
+.social-icon {
+  color: #fff;
+  margin: 0.2em;
+}
+
+.social-icon:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 * {
