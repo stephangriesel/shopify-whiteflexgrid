@@ -1,25 +1,25 @@
 <header>
     <nav>
-        <div>
-            <h2>Logo</h2>
-        </div>
-        {% include 'menu' %}
-        <div>
-            <ul>
-                <!-- https://shopify.dev/docs/liquid/reference/objects/shop -->
-                <li><a href="/cart">Cart</a></li>
-                {% if shop.customer_accounts_enabled %}
-                {% if customer %}
-                <li><a href="/account">Your Account</a></li>
-                <li><a href="/account">Log Out</a></li>
-                {% else %}
-                <li><a href="/account/login">Login</a></li>
+
+        <!-- New menu-->
+        <nav>
+            {% include 'menu' %}
+            <li class="item button"><a href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+            <li class="item button"><a href="/account"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+            <li class="item button"><a href="/account"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+            {% else %}
+            <li class="item button secondary"><a href="/account/login"><i class="fa fa-sign-in"
+                        aria-hidden="true"></i></a>
+            </li>
+            <li class="toggle"><span><i class="fa fa-bars"></i></span></li>
             </ul>
             {% endif %}
             {% endif %}
-        </div>
+        </nav>
 
-    </nav>
+        <!-- New menu stop-->
 </header>
 
 {% schema %}
