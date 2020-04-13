@@ -1,3 +1,9 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +13,6 @@ a {
   text-decoration: none;
   color: #000;
   cursor: pointer;
-}
-
-body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Menu */
@@ -442,6 +443,13 @@ section {
 }
 
 /* Collection Section */
+.sale-text {
+  color: red;
+}
+.sale-text::after {
+  content: '!!!';
+}
+
 .section-collection {
   display: -ms-grid;
   display: grid;
@@ -601,6 +609,10 @@ textarea {
 
 .contact-blocks ul {
   list-style: none;
+}
+
+.contact-text {
+  font-size: 1.2em;
 }
 
 /* Footer */

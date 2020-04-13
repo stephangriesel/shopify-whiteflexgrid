@@ -31,7 +31,7 @@
             </div>
             <p>{{product.price | money}}</p>
             {% if product.compare_at_price and product.compare_at_price != product.price %}
-            <h4>SALE</h4>
+            <h4 class="sale-text">SALE</h4>
             {% endif %}
         </div>
         {% endfor %}

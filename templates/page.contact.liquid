@@ -31,20 +31,20 @@
             <ul class="contact-short-info list-unstyled">
                 {% if settings.address != blank %}
                 <li>
-                    <i class="fa fa-home"></i>
-                    <span>Address: {{settings.address}}</span>
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="contact-text">Address: {{settings.address}}</span>
                 </li>
                 {% endif %}
                 {% if settings.phone != blank %}
                 <li>
-                    <i class="fa fa-mobile"></i>
-                    <span>Phone: {{settings.phone}}</span>
+                    <i class="fa fa-mobile fa-2x"></i>
+                    <span class="contact-text">Phone: {{settings.phone}}</span>
                 </li>
                 {% endif %}
                 {% if settings.email != blank %}
                 <li>
-                    <i class="fa fa-envelope-o"></i>
-                    <span>Email: {{settings.email}}</span>
+                    <i class="fa fa-envelope-o fa-2x"></i>
+                    <span class="contact-text">Email: {{settings.email}}</span>
                 </li>
                 {% endif %}
             </ul>
