@@ -2,6 +2,7 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 18px;
+  color: #666666;
 }
 
 * {
@@ -20,6 +21,26 @@ a {
   padding: 0.5em;
   margin: 0.2em;
   font-size: 1.2em;
+  border: none;
+}
+
+.product-btn {
+  background: rgba(216, 216, 216, 0.5);
+  padding: 0.5em;
+  margin: 0.2em;
+  font-size: 1.2em;
+  border: none;
+  text-transform: uppercase;
+}
+
+.product-btn:hover {
+  background: rgba(216, 216, 216, 1);
+  padding: 0.5em;
+  margin: 0.2em;
+  font-size: 1.2em;
+  border: none;
+  transition: ease-in-out 1s;
+  color: #666666;
 }
 
 /* Menu */
@@ -263,50 +284,50 @@ nav ul {
   .main .product-overlay-text-left,
   .product-block .product-overlay-text-left {
     position: absolute;
-    top: 80%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   .main .product-overlay-text-left a,
   .product-block .product-overlay-text-left a {
-    color: #000;
+    color: #666666;
   }
   .main .product-overlay-text-right,
   .product-block .product-overlay-text-right {
     position: absolute;
-    top: 80%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   .main .product-overlay-text-right a,
   .product-block .product-overlay-text-right a {
-    color: #000;
+    color: #666666;
   }
   .main .product-overlay-text-left-bottom,
   .product-block .product-overlay-text-left-bottom {
     position: absolute;
-    top: 20%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   .main .product-overlay-text-left-bottom a,
   .product-block .product-overlay-text-left-bottom a {
-    color: #000;
+    color: #666666;
   }
   .main .product-overlay-text-right-bottom,
   .product-block .product-overlay-text-right-bottom {
     position: absolute;
-    top: 20%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   .main .product-overlay-text-right-bottom a,
   .product-block .product-overlay-text-right-bottom a {
-    color: #000;
+    color: #666666;
   }
 }
 
@@ -581,6 +602,7 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 2em 0.5em;
+  height: 100vh;
 }
 
 .product-info {
