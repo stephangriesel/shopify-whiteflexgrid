@@ -15,6 +15,13 @@ a {
   cursor: pointer;
 }
 
+.btn {
+  background: #d8d8d8;
+  padding: 0.5em;
+  margin: 0.2em;
+  font-size: 1.2em;
+}
+
 /* Menu */
 nav a {
   text-decoration: none;
@@ -574,6 +581,29 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 2em 0.5em;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-info-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em 0;
+}
+
+.cart-product-image {
+}
+
+.cart-total {
+  display: flex;
+  border: 1px solid #d6d6d6;
+  margin: 1em;
+  padding: 0.5em;
+  background: #d6d6d6;
 }
 
 /* Full Height VH Pages */
