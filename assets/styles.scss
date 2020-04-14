@@ -680,10 +680,9 @@ footer {
   display: grid;
   place-items: center;
   padding: 50px;
-}
-
-footer li {
-  margin: 0 0.2em;
+  li {
+    margin: 0 0.2em;
+  }
 }
 
 footer ul {
