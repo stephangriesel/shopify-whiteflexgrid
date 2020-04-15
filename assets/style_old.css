@@ -1,5 +1,6 @@
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 18px;
   color: #666666;
 }
@@ -24,7 +25,7 @@ a {
 }
 
 .product-btn {
-  background: #d8d8d880;
+  background: rgba(216, 216, 216, 0.5);
   padding: 0.5em;
   margin: 0.2em;
   font-size: 1.2em;
@@ -332,17 +333,6 @@ nav ul {
 }
 
 /* Trending Products */
-.sq-btn {
-  background: #d8d8d880;
-  padding: 0.2em;
-  margin: 0.2em;
-}
-
-.sq-btn:hover {
-  background: #d8d8d8;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
-}
 
 .trend-product {
   position: relative;
@@ -350,40 +340,91 @@ nav ul {
 }
 
 .add-cart-more-overlay {
+  display: flex;
+}
+/* .productMoreCart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+  -ms-flex-pack: center;
+  justify-content: center;
+} */
 
 .trend-product .trend-product-img {
   width: 100%;
 }
 
-@media all and (min-width: 768px) {
-  .sq-btn {
-    font-size: 2em;
-  }
-  .add-cart-more-overlay {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.trend-product .trend-product-overlay-text-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-one a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-two a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-three {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-three a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-four {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-four a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-five {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-five a {
+  color: #000;
+}
+
+.trend-product .trend-product-overlay-text-six {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.trend-product .trend-product-overlay-text-six a {
+  color: #000;
 }
 
 section {
@@ -738,4 +779,4 @@ body {
     grid-column: auto / span 2;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

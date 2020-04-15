@@ -3,7 +3,7 @@
     {% for product in collection.products limit: section.settings.product_limit %}
     <div class="trend-product">
         <img class="trend-product-img" src="{{product.featured_image.src | img_url: '1920x'}}">
-        <div class="trend-product-overlay-text-one">
+        <div class="trend-product-overlay-text">
             {% if product.compare_at_price and product.compare_at_price != product.price %}
             <p>SALE</p>
             {% endif %}
@@ -11,13 +11,13 @@
         <div>
             <h4><a href="{{product.url}}">{{product.title}}</a></h4>
             <p>{{product.price | money}}</p>
-            <div class="productMoreCart">
-                <p><a href="{{product.url}}"><i class="fa fa-search" aria-hidden="true"></i></a></p>
+            <div class="add-cart-more-overlay">
+                <p><a href="{{product.url}}"><i class="fa fa-search sq-btn" aria-hidden="true"></i></a></p>
                 <p>
                     <form id="form-{{product.handle}}" method="post" action="/cart/add">
                         <input type="hidden" name="id" value="{{product.variants.first.id}}">
                         <a onclick="document.getElementById('form-{{product.handle}}').submit()"><i
-                                class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                                class="fa fa-cart-plus sq-btn" aria-hidden="true"></i></a>
                     </form>
                 </p>
             </div>
