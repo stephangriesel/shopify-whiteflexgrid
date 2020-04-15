@@ -332,6 +332,23 @@ nav ul {
   }
 }
 
+/* Shop Page */
+
+.main-product {
+  position: relative;
+  text-align: center;
+
+  @media all and (min-width: 768px) {
+    .sq-btn {
+      font-size: 1.2em;
+    }
+    .add-cart-more-overlay {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
 /* Trending Products */
 
 .sq-btn {

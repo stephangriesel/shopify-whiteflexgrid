@@ -331,6 +331,27 @@ nav ul {
   }
 }
 
+/* Shop Page */
+.main-product {
+  position: relative;
+  text-align: center;
+}
+
+@media all and (min-width: 768px) {
+  .main-product .sq-btn {
+    font-size: 1.2em;
+  }
+  .main-product .add-cart-more-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 /* Trending Products */
 .sq-btn {
   background: #d8d8d880;
