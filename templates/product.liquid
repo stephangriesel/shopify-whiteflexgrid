@@ -19,10 +19,10 @@
 </div> -->
 
 
-<section>
+<section class="single-product">
     <div class="img-block">
         {% for image in product.images %}
-        <img src="{{image.src | img_url: '300x'}}" alt="">
+        <img class="single-product-img" src="{{image.src | img_url: '1920x'}}" alt="">
         <div class="img-thumbs">
             <img src="{{image.src | img_url: '90'}}" alt="">
         </div>
@@ -38,7 +38,7 @@
             {% for product_option in product.options_with_values%}
             <div class="product-category">
                 <span>{{product_option.name}}</span>
-                <select class="form-control" data-index="option{{forloop.index}}">
+                <select class="form-control option-box" data-index="option{{forloop.index}}">
                     {% for value in product_option.values %}
                     <!-- set value of selected option as attribute  -->
                     <option value="{{value | escape }}" {% if product_option.selected_value == value %}
@@ -52,19 +52,19 @@
             {% endunless %}
             <div class="product-quantity">
                 <span>Quantity:</span>
-                <input min="1" type="number" id="quantity" name="quantity" value="1" />
+                <input class="product-quantity-input" min="1" type="number" id="quantity" name="quantity" value="1" />
             </div>
-            <div class="product-category">
+            <!-- <div class="product-category">
                 <span>Categories:</span>
                 <ul>
                     {% for collection in product.collections%}
                     <li><a href="{{collection.url}}">{{collection.title}}</a></li>
                     {% endfor %}
                 </ul>
-            </div>
+            </div> -->
             <p>{{product.price | money}}</p>
             <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
-            <button type="submit" value="Add to Cart">Add To Cart</button>
+            <button class="btn" type="submit" value="Add to Cart">Add To Cart</button>
         </form>
 
         <div class="product-information">
