@@ -1,6 +1,6 @@
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 18px;
+  font-size: 1.2em;
   color: #666666;
 }
 
@@ -57,7 +57,7 @@ nav ul {
 }
 
 .menu li {
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 15px 5px;
 }
 
@@ -530,6 +530,7 @@ section {
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #fff;
+  font-size: 1.2em;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -561,12 +562,17 @@ section {
   transition: max-height 0.2s ease-out;
 }
 
+.accordion {
+  border: 1px solid #666666;
+  margin: 2px 10px;
+}
+
 .accordion:after {
-  content: '\02795';
+  content: none;
   background: #bdbdbd;
   border-radius: 50%;
   /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
+  font-size: 1.2em;
   color: #777;
   float: right;
   margin-left: 5px;
@@ -574,7 +580,7 @@ section {
 }
 
 .menuactive:after {
-  content: '\2796';
+  content: none;
   /* Unicode character for "minus" sign (-) */
   -webkit-transition: ease-in-out 1s;
   transition: ease-in-out 1s;
