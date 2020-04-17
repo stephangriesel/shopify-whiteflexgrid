@@ -26,27 +26,33 @@
         </div>
         {% endform %}
     </div>
+    <!-- Image referencing in config > settings_schema.json -->
     <div class="contact-blocks">
-        <div class="contact-info">
+        <div class="contact-info bg-img">
             <ul class="contact-short-info list-unstyled">
-                {% if settings.address != blank %}
-                <li>
-                    <i class="fa fa-home fa-2x"></i>
-                    <span class="contact-text">Address: {{settings.address}}</span>
-                </li>
-                {% endif %}
-                {% if settings.phone != blank %}
-                <li>
-                    <i class="fa fa-mobile fa-2x"></i>
-                    <span class="contact-text">Phone: {{settings.phone}}</span>
-                </li>
-                {% endif %}
-                {% if settings.email != blank %}
-                <li>
-                    <i class="fa fa-envelope-o fa-2x"></i>
-                    <span class="contact-text">Email: {{settings.email}}</span>
-                </li>
-                {% endif %}
+                <div class="img-block">
+                    <img src="{{settings.contact_img | img_url: '1920x'}}" alt="Contact Image">
+                </div>
+                <div>
+                    {% if settings.address != blank %}
+                    <li>
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="contact-text">Address: {{settings.address}}</span>
+                    </li>
+                    {% endif %}
+                    {% if settings.phone != blank %}
+                    <li>
+                        <i class="fa fa-mobile fa-2x"></i>
+                        <span class="contact-text">Phone: {{settings.phone}}</span>
+                    </li>
+                    {% endif %}
+                    {% if settings.email != blank %}
+                    <li>
+                        <i class="fa fa-envelope-o fa-2x"></i>
+                        <span class="contact-text">Email: {{settings.email}}</span>
+                    </li>
+                    {% endif %}
+                </div>
             </ul>
         </div>
     </div>

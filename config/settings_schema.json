@@ -50,6 +50,11 @@
     "name": "Contact",
     "settings": [
       {
+        "type": "image_picker",
+        "id": "contact_img",
+        "label": "Contact Page Image"
+      },
+      {
         "type": "text",
         "id": "address",
         "label": "Address"
