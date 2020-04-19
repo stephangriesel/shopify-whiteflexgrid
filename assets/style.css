@@ -411,11 +411,6 @@ nav ul {
 section {
   display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   grid-gap: 2em;
   -ms-grid-columns: minmax(250px, 1fr) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -450,23 +445,6 @@ section {
   font-size: 1.2em;
   border: none;
   width: 3em;
-}
-
-.single-product .img-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 2em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .single-product .single-product-img {
@@ -747,6 +725,17 @@ textarea {
   background: #fff;
   width: 50px;
   margin: 3px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact-img-block {
