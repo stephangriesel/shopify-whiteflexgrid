@@ -682,7 +682,8 @@ button {
 
 .img-block img {
   max-width: 37.5em;
-  max-height: 37.5em;
+  width: 100%;
+  height: auto;
 }
 
 /* Contact Page */
@@ -717,6 +718,9 @@ textarea {
 
 .contact-text {
   font-size: 1.2em;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5em;
+  margin: 0.2em;
 }
 
 .contact-img-wrapper {
@@ -730,9 +734,23 @@ textarea {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.contact-overlay-text li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-overlay-text .icon {
+  background: #fff;
+  width: 50px;
+  margin: 3px 0;
 }
 
 .contact-img-block {
+  width: 100%;
   max-width: 32.5em;
 }
 
