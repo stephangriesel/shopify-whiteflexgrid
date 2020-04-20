@@ -14,12 +14,12 @@
             </div>
 
             <div class="product-info-row">
-                <div>
+                <div class="product-info-item">
                     <input type="number" class="" name="updates[]" value={{line_item.quantity}} min="0" pattern="[0-9]*"
                         style="width:30px;">
                 </div>
-                <div>{{line_item.line_price | money}}</div>
-                <div>
+                <div class="product-info-item">{{line_item.line_price | money}}</div>
+                <div class="product-info-item">
                     <a class="product-remove" href="/cart/change?line={{forloop.index}}&quantity=0"
                         rel={{line_item.id}}><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
@@ -35,8 +35,10 @@
                     {{cart.total_price | money}}
                 </div>
             </div>
-            <input type="submit" name="checkout" class="btn" value="Checkout">
-            <input type="submit" name="update" class="btn" value="Update">
+            <div class="cart-status-checkout">
+                <input type="submit" name="checkout" class="btn" value="Checkout">
+                <input type="submit" name="update" class="btn" value="Update">
+            </div>
         </form>
     </div>
 </section>

@@ -638,8 +638,18 @@ button {
   display: flex;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 1em 0;
+}
+
+.product-info-item {
+  margin: 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart-total {
@@ -649,7 +659,20 @@ button {
   border: 1px solid #d6d6d6;
   margin: 1em;
   padding: 0.5em;
-  background: #d6d6d6;
+  background: #e4e3e3;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cart-status-checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 1em;
 }
 
 /* Full Height VH Pages */
