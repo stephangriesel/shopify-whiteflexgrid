@@ -1,3 +1,5 @@
+/* Globals */
+
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -24,6 +26,8 @@ a {
   border: none;
   cursor: pointer;
 }
+
+/* Products */
 
 .product-btn {
   background: #d8d8d880;
@@ -880,9 +884,33 @@ body {
   grid-column: auto / span 3;
 }
 
+/* Animations */
+
+// Menu
+nav {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* Other CSS */
+
 @media (min-width: 550px) {
   .span-2 {
     grid-column: auto / span 2;
   }
 }
+
+/* Custom CSS Section */
+
 /*# sourceMappingURL=styles.css.map */
